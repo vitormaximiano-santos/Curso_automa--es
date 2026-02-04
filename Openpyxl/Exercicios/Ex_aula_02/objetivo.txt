@@ -1,0 +1,28 @@
+"""Exercício 1 – Cadastro simples
+Crie um arquivo chamado cadastro.xlsx com uma aba chamada Pessoas.
+Adicione os seguintes dados nas células manualmente (com planilha["A1"] = ...):
+
+| Nome     | Cidade         |
+|----------|----------------|
+| João     | Recife         |
+| Marina   | São Paulo      |
+| Otávio   | Belo Horizonte |
+E salve o arquivo
+
+Exercício 2 – Adicionando dados com append
+No mesmo arquivo cadastro.xlsx, adicione mais duas pessoas na aba Pessoas utilizando o método append():
+
+Letícia, Porto Alegre
+
+Gustavo, Salvador
+
+Exercício 3 – Multiplas abas e estrutura de planilha
+Crie uma nova aba chamada Visitas.
+
+Escreva a estrutura da tabela:
+
+| Data       | Visitantes |
+|------------|------------|
+| 01/01/2025 | 134        |
+| 02/01/2025 | 156        |
+Na aba Visitas, sobrescreva o número de visitantes do dia 01/01/2025 para 142"""

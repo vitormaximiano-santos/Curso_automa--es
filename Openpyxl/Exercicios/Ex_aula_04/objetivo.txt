@@ -1,0 +1,40 @@
+📝 Exercício – Diário de Leituras
+Você deve criar uma planilha chamada diario_leituras.xlsx para registrar os livros que você está lendo no mês.
+
+Estrutura esperada
+A1:D1 → título mesclado: "Diário de Leituras – Agosto 2025".
+
+A2:D2 → cabeçalho com colunas: Livro, Autor, Data de Início, Progresso (%).
+
+Linhas seguintes → registros fictícios de livros.
+
+1 - Requisitos de estilização
+Título (linha 1):
+
+Mesclar células A1:D1.
+
+Centralizar o texto.
+
+Fundo azul escuro (1F497D).
+
+Fonte branca, negrito, tamanho 14.
+
+2 - Cabeçalho (linha 2):
+
+Fonte branca em negrito.
+
+Fundo cinza escuro (4f4f4f).
+
+Bordas finas.
+
+3 - Linhas dos livros:
+
+Alternar cores de fundo (efeito zebrado: uma linha branca, outra cinza claro).
+
+Coluna "Livro" e "Autor" alinhadas à esquerda.
+
+Coluna "Data de Início" alinhada ao centro, formatada como DD/MM/YYYY.
+
+Coluna "Progresso (%)" alinhada à direita, formatada como número percentual com uma casa decimal (0.0%).
+
+4 - Bordas finas em todas as células da tabela.

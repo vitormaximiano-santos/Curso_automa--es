@@ -1,0 +1,24 @@
+Leitura de dados
+Use a planilha anexada para resolver os desafios:
+
+🟢 Exercício 1 – Dados pontuais
+Abra a aba Alunos e imprima os valores exatos das seguintes células:
+
+B2
+
+D5
+
+E10
+
+🟡 Exercício 2 – Leitura de colunas
+Percorra toda a coluna “Nota Final” e exiba somente os alunos com nota acima de 8.0.
+
+🔴 Exercício 3 – Relatório geral
+Percorra todos os registros (exceto o cabeçalho) e imprima um relatório no seguinte formato:
+
+ALUNO: Maria Souza
+CURSO: Python
+IDADE: 29
+NOTA FINAL: 9.0
+MATRÍCULA: 15/02/2023
+-------------------------
