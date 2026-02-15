@@ -1,0 +1,67 @@
+📌 Sessão 1: Contexto
+Instalação
+
+pip install playwright → instala a biblioteca Playwright.
+
+playwright install → baixa os binários dos navegadores (Chromium, Firefox, WebKit).
+
+Isso garante que você tenha os motores de navegador prontos para automação.
+
+Estrutura básica
+
+with sync_playwright() as pw: → inicializa o Playwright no modo síncrono.
+
+pw.chromium.launch(headless=False) → abre o navegador Chromium. O parâmetro headless=False permite ver o navegador em ação.
+
+contexto = navegador.new_context() → cria um contexto de navegação, que funciona como uma sessão isolada (cookies, cache, etc.).
+
+pagina = contexto.new_page() → abre uma nova aba dentro desse contexto.
+
+Fluxo geral da automação
+
+Navegar até uma página (goto).
+
+Interagir com elementos (locator, click, fill).
+
+Validar condições (expect).
+
+Fechar o navegador (close).
+
+📌 Sessão 2: Comandos (como funcionam)
+Navegação e informações
+
+pagina.goto("URL") → acessa o endereço especificado.
+
+pagina.title() → retorna o título da página atual.
+
+Seleção de elementos
+
+pagina.locator("xpath=...").click() → seleciona via XPath e clica.
+
+pagina.locator("div").filter(has_text="...").get_by_role("link") → usa filtros semânticos (texto e papel do elemento).
+
+pagina.get_by_role("link").all() → retorna todos os links da página.
+
+Gerenciamento de páginas
+
+with contexto.expect_page() as pagina2_info: → espera que uma nova aba seja aberta após uma ação (ex.: clique em link).
+
+pagina2 = pagina2_info.value → captura a nova aba aberta.
+
+pagina2.goto("URL") → navega nessa nova aba.
+
+Interação com formulários
+
+get_by_role("textbox", name="...").fill("valor") → preenche campos de texto.
+
+get_by_role("button", name="...").click() → clica em botões.
+
+Validação de elementos
+
+expect(elemento).to_be_visible() → garante que o elemento está visível antes de interagir.
+
+Isso evita erros em casos de carregamento lento ou elementos dinâmicos.
+
+Encerramento
+
+navegador.close() → fecha o navegador e encerra a sessão.

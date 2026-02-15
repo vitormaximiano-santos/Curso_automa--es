@@ -1,0 +1,34 @@
+Fluxo da Automação / Base
+
+1-Abrir o arquivo Excel  
+O programa carrega a planilha de dados utilizando a biblioteca openpyxl.
+
+2-Mostrar as planilhas disponíveis e pedir escolha do usuário  
+Todas as abas do arquivo são listadas no terminal, e o usuário informa o número correspondente à aba desejada.
+
+3-Tornar a planilha escolhida disponível e obter o cabeçalho  
+A aba selecionada é carregada para operações, e a linha de cabeçalho é extraída para identificar os nomes das colunas.
+
+4-Identificar a última linha com informações e ler apenas as colunas necessárias  
+O código determina a última linha preenchida e percorre apenas as colunas relevantes para a automação:
+
+DT (coluna A)
+
+EIXO (coluna E)
+
+VALOR (coluna X)
+
+5-Enviar as informações para o formulário  
+Com o navegador aberto uma única vez, cada linha válida é processada: os dados são inseridos nos campos do formulário online e enviados.
+Caso algum dos campos obrigatórios esteja vazio, a automação interrompe o processo.
+
+Tratamento de erros e optimizações
+
+tratamento 1- caso a automação seja interrompida no meio do processo, não reenviar os mesmos dados quando o usuário for solicitar novamente
+
+tratamento 2- caso uma coluna não exista, mostrar mensagem de erro, e dizer qual coluna está faltando, 
+ou então se ela esta na posição errada, mostrar mensagem de erro, e dizer qual coluna está errada e qual a posição correta
+
+tratamento 3- caso o usuario encerrar a automação prematuramente, mostrar mensagem(automaçaão encerrada) 
+
+optimização 1- trocar "time.sleep" por WebDriverWait e expected_conditions
